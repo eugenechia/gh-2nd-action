@@ -16,6 +16,7 @@ jobs:
         run: npm test
   deploy:
     needs: test
+    // the 'needs' keyword indicates a sequential job. Else its a parallel job
     runs-on: ubuntu-latest
     steps:
       - name: Get code
